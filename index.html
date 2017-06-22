@@ -1,0 +1,1214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>特购社－会员制进口超市</title>
+<link href="favico.ico" rel="shortcut icon">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/banner.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script>
+	$(window).scroll(function(){
+			var s=$(window).scrollTop();
+			if(s>89){
+				$("#hr").css({"position":"fixed",top:"0px"})		
+			}else{
+				$("#hr").css({"position":"relative"})	
+			}
+		})
+</script>
+</head>
+
+<body>
+<!--返回顶部代码-->
+<div id="return" title="返回顶部">
+<img src="images/fanhuidingbu.png">
+</div>
+<script>
+$("#return").click(function () {
+        var speed=200;
+        $('body,html').animate({ scrollTop: 0 }, speed);
+        return false;
+ });
+ </script>
+ <!--返回顶部代码结束-->
+ <!--右侧导航栏开始-->
+ <div id="sidebar">
+        <div id="wrap">
+            <div id="prof" class="item">
+            <div class="sbar">
+                <span>
+                    <i class="iconfont">&#xe601;</i>
+                </span>
+                <div>
+                    我
+                </div>
+                </div>
+                <em class="nav_content">个人中心<i class="iconfont" style="position:absolute; width:20px;right:-10px; color:#8f42f7;">&#xe603;</i></em>
+            </div>
+            <div id="asset" class="item">
+            <div class="sbar">
+                <span>
+                    <i class="iconfont">&#xe658;</i>
+                </span>
+                <div>
+                    资产
+                </div>
+                </div>
+                 <em class="nav_content">我的资产<i class="iconfont" style="position:absolute; width:20px;right:-10px; color:#8f42f7;">&#xe603;</i></em>
+            </div>
+            <div id="brand" class="item">
+            <div class="sbar">
+                <span>
+                    <i class="iconfont">&#xe602;</i>
+                </span>
+                <div>
+                    品牌
+                </div>
+                </div>
+                 <em class="nav_content">关注的品牌<i class="iconfont" style="position:absolute; width:20px;right:-10px; color:#8f42f7;">&#xe603;</i></em>
+            </div>
+
+            <div id="foot" class="item">
+            <div class="sbar">
+                <span>
+                    <i class="iconfont">&#xe60d;</i>
+                </span>
+                <div>
+                    优惠券
+                </div>
+                </div>
+                 <em class="nav_content">我的优惠券<i class="iconfont" style="position:absolute; width:20px;right:-10px; color:#8f42f7;">&#xe603;</i></em>
+            </div>
+            <div id="calendar" class="item">
+            <div class="sbar">
+                <span>
+                    <i class="iconfont">&#xe63a;</i>
+                </span>
+                <div>
+                    看过
+                </div>
+                </div>
+                 <em class="nav_content">浏览过的商品<i class="iconfont" style="position:absolute; width:20px;right:-10px; color:#8f42f7;">&#xe603;</i></em>
+            </div>
+        </div>
+        <div id="closeBar">
+            <div>
+                <i class="iconfont">&#xe630;</i>
+            </div>
+        </div>
+    </div>
+<script>
+
+/*$(".item").hover(function(){
+	//console.log($("this.item"))
+	$(".item em").animate({
+		left:"40px",
+		opacity:1,
+		
+		
+		},500).show()
+	
+	},function(){
+	$(".item em").animate({
+		left:"65px",
+		opacity:0,	
+		},500,function(){
+			$(".item em").hide()	
+		});
+		
+		});*/
+
+
+</script>   
+<!--滚动一定距离出现右侧导航栏-->
+<script>
+
+
+$(window).scroll(function(){
+
+if($(window).scrollTop() >= 500){
+$("#sidebar").css("display","block"); 
+/*$("#closeBar").css({
+		color:"white",
+		animation:"move-right 0 ease  backwards"
+		
+		});	*/
+} else{
+$("#sidebar").css("display","none"); 
+}
+});
+</script>     
+    
+    
+    
+<script>
+$("#closeBar").click(function(){
+	if($("#sidebar").css("right")=="0px"){
+		$("#sidebar").css("right","-40px");
+	$("#closeBar").css({
+		color:"red",
+		animation:"move-left 0.8s ease-in  forwards"
+		
+		});	
+	}else if($("#sidebar").css("right")=="-40px"){
+		$("#sidebar").css("right","0px");
+		$("#closeBar").css({
+		color:"#FFF",
+		animation:"move-right 0.5s linear  backwards"
+		})	
+		}
+	});
+
+
+</script>   
+<!--左侧导航栏结束--> 
+
+ 
+<!--头部广告-->
+<div id="ad_banner">
+<div id="bjpic"></div>
+</div>
+
+<div id="hr">
+  <div class="hr-top w">
+    <div class="t-logo"><a href="index.html"><img src="images/toplogo.png"> </a></div>
+    <div class="t-input">
+      <input class="text" type="text" name="word" id="searchword" placeholder="输入你想要的商品">
+      <em class="btn Search"></em></div>
+    <span><a href="#">什么是特购社？</a></span>
+    <div class="hr-tr">
+      <div class="gouwudai"><a href="order.html"><em><img src="images/gouwudai.png"></em><strong><img src="images/xiala.png"></strong></a>
+        <div class="warn">
+          <div class="gou-1">您的购物袋还没有宝贝哦</div>
+          <div class="gou-2"> <span>合计：￥0</span> </div>
+          <div class="gou-3"> <a href="#">去购物袋</a> </div>
+        </div>
+      </div>
+      <div class="land"><a href="login.html">登陆&nbsp;|</a></div>
+      <div class="rest"><a href="register.html">注册</a></div>
+    </div>
+  </div>
+</div>
+<!--导航栏-->
+<div id="top-nav">
+  <div class="top-nav">
+   <div class="nav_all">
+            <a class="nav_all_x1" href="#">
+                商品分类
+                <span></span>
+                </a>
+             <ol id="navlist">
+          <li><a href="list.html" target="_blank"><em><img src="images/logo_389.png"/></em>冷冻冷藏 <s><img src="images/bigjinru.png"/></s></a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">冷冻水产</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">冷冻肉</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">冷冻半成品</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/1.jpg"/></a> <a href="#" target="_blank"><img src="images/2.jpg"/></a> </div>
+            </div>
+          </li>
+          <li><a href="#" target="_blank"> <em><img src="images/logo_445.png"/></em>健康膳食 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">米面粮油</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">早餐食品</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">果干坚果</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">休闲零食</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/3.jpg"/></a> <a href="#" target="_blank"><img src="images/4.jpg"/></a> </div>
+            </div>
+          </li>
+          <li><a href="#" target="_blank"> <em><img src="images/logo_407.png"/></em>健康饮品 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">水</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">饮料</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">冲饮</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">酒</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">咖啡/茶</a></dt>
+                  </dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/5.jpg"></a> <a href="#" target="_blank"><img src="images/6.jpg"></a> </div>
+            </div>
+          </li>
+          <li><a href="#" target="_blank"> <em><img src="images/logo_386.png"/></em>营养保健 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">基础营养</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">美容塑形</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">三高免疫</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">孕婴营养</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">骨骼睡眠</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">代谢调节</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">男性保健</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/7.jpg"/></a> <a href="#" target="_blank"><img src="images/8.jpg"/></a> </div>
+            </div>
+          </li>
+          <li><a href="#" target="_blank"> <em><img src="images/logo_456.png"/></em>个人护理 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">面部护理</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">身体护理</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">口腔护理</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">洗发护发</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/9.jpg"/></a> <a href="#" target="_blank"><img src="images/10.jpg"/></a> </div>
+            </div>
+          </li>
+          <li><a href="/search?classId=463" target="_blank"> <em><img src="images/logo_463.png"/></em>绿色家居 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">纸制品</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">衣物洗护</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">居家清洁</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">居家用品</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/11.jpg"/></a> </div>
+            </div>
+          </li>
+          <li><a href="/search?classId=391" target="_blank"> <em><img src="images/logo_391.png"/></em>环球特购 <s><img src="images/bigjinru.png"/></s> </a>
+            <div class="t-level">
+              <div class="t-level_l">
+                <dl>
+                  <dt><a href="#" target="_blank">孕婴童</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">海外超市</a></dt>
+                  <dd> </dd>
+                </dl>
+                <dl>
+                  <dt><a href="#" target="_blank">时尚精品</a></dt>
+                  <dd> </dd>
+                </dl>
+              </div>
+              <div class="t-level_r"> <a href="#" target="_blank"><img src="images/12.jpg"/></a> <a href="#" target="_blank"><img src="images/13.jpg"/></a> </div>
+            </div>
+          </li>
+        </ol>   
+            
+        </div>  
+    <div class="nav-r">
+      <ul>
+        <li><a href="detail-luo.html" target="_blank">罗杰斯专区</a></li>
+        <li><a href="#" target="_blank">澳洲直邮</a></li>
+        <li><a href="#" target="_blank">新品推荐</a></li>
+        <li><a href="#" target="_blank">出清频</a></li>
+        <li><a class="erweima_a" href="#" target="_blank">特购社APP下载</a>
+          <div class="erweima">
+            <p><img src="images/erweima.jpg"><br>
+              &nbsp;&nbsp;扫描二维码<br>
+              &nbsp;&nbsp;&nbsp;下载特购社手机客户端</p>
+          </div>
+          <script>
+			$(function(){
+            $(".erweima_a").hover(function(){
+            $(".erweima").show();
+            
+            },function(){
+            $(".erweima").hide();
+			});           
+            });
+</script> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--菜单栏end--> 
+
+<!--轮播栏-->
+<div class="banner-wrap">
+  <div class="cont w">
+    <ul class="content">
+      <li class="current"><img src="images/banner3.jpg"><a href="#" target="_blank"></a></li>
+      <li><img src="images/banner1.jpg"><a href="#" target="_blank"></a></li>
+      <li><img src="images/banner2.jpg"><a href="#" target="_blank"></a></li>
+    </ul>
+  </div>
+  <ol>
+    <li class="show"></li>
+    <li></li>
+    <li></li>
+  </ol>
+</div>
+<script>
+var index=0;
+var timer=setInterval(change,3000);
+var len=$('.content li').length;
+function change(){
+	index++;
+	if(index==len){
+		index=0;
+		}
+		$('.content li').eq(index).addClass('current').siblings().removeClass('current');
+		$('.banner-wrap ol li').eq(index).addClass('show').siblings().removeClass('show');
+	};
+	$('.banner-wrap ol li').click(function(){
+		show($(this).index());
+		
+		});
+		function show(_index){
+			$('.content li').eq(_index).addClass('current').siblings().removeClass('current');
+		$('.banner-wrap ol li').eq(_index).addClass('show').siblings().removeClass('show');
+			index=_index;
+			};
+			
+	$('.banner-wrap').hover(function(){
+			clearInterval(timer);
+		},function(){
+			timer=setInterval(change,3000);
+			});
+
+</script> 
+
+<!--中间第一部分开始-->
+<div class=section1>
+  <div class="s1-tip">
+    <h2><i><img src="images/bth.png"></i><span>今日闪购&nbsp;/</span><em>&nbsp;数量有限&nbsp;&nbsp;售完即止</em>
+    <strong style=" float:left; font-size:18px; margin-left:100px;">距离闪购结束还有:</strong>
+    <div class="new" id ="timer">
+                        <span>7</span>
+                        <em>天</em>
+                        <span>10</span>
+                        <em>时</em>
+                        <span>12</span>
+                        <em>分</em>
+                        <span class="weiyi" style="background:yellow;">33</span>
+                        <em>秒</em>
+                    </div>
+      <p><a href="#">更多&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="sec-l"> <a href="javascript:;"><img src="images/1.png" alt="一生所爱相知半干红葡萄酒 750ml*6瓶">
+    <div class="hd"><a href="javascript:;"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;padding-left:40px;padding-top:3px;">加入购物车</a></div>
+    </a>
+    <div class="sec-l-2"> <span class="wz1"><a href="#">[摩尔多瓦] 一生所爱相知半干红葡萄酒 750ml*6瓶</a></span> <span class="wz2">
+      <div class="wz2-t"> <b>特惠</b>超值必抢 </div>
+      <em class="wz2-m" style="text-decoration:line-through">￥299.00</em>
+      <p class="wz2-b">￥289.00</p>
+      </span> <span class="wz3">用两支蜡烛，一杯美酒，我希望打动全世界最特别的你！</span> </div>
+  </div>
+  <div class="sec-r"> <strong><img src="images/haiwaigou.png"></strong> <a href="javascript:;"><img src="images/14.jpg" alt="一生所爱相知半干红葡萄酒 750ml*6瓶">
+    <div class="hd"><a href="javascript:;"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;padding-left:42px;padding-top:3px;">加入购物车</a></div>
+    </a>
+    <div class="sec-r-2"> <span class="wz1"><a href="#">[新西兰] 澳洲直邮 2瓶装 Swisse斯维斯蔓越莓胶囊30粒</a></span> <span class="wz2">
+      <div class="wz2-t"> <b>特惠</b>超值必抢 </div>
+      <em class="wz2-m" style="text-decoration:line-through">￥154.00</em>
+      <p class="wz2-b">￥135.00</p>
+      </span> <span class="wz3">每天一粒，做自在女人。</span> </div>
+  </div>
+</div>
+<script>
+function FreshTime()
+	{
+        var endtime=new Date("2017/5/16,24:00:00");
+        var nowtime = new Date();
+        var lefttime=parseInt((endtime.getTime()-nowtime.getTime())/1000); 
+        d=  parseInt(lefttime/(24*60*60));
+		if(d<10){
+		d=0+''+d;
+		}
+        h=  parseInt(lefttime/(60*60)%24);
+		if(h<10){
+		h=0+''+h;
+		}
+        m=  parseInt(lefttime/60%60);
+		if(m<10){
+		m=0+''+m;
+		}
+        s= parseInt(lefttime%60);
+		if(s<10){
+		s=0+''+s;
+		}
+       	str_time="<span>"+d+"</span><em>天</em>"+"<span>"+h+"</span><em>时</em>"+"<span>"+m+"</span><em>分</em>"+"<span class='weiyi'>"+s+"</span><em>秒</em>";
+
+        document.getElementById("timer").innerHTML=str_time;
+        if(lefttime<=0){
+        document.getElementById("timer").innerHTML="闪购已结束";
+        clearInterval(sh);
+        }
+		var sh;
+   sh= setTimeout(FreshTime,500)  ;
+}
+   FreshTime()
+   
+</script>
+
+
+</script>
+<!--中间第一部分结束--> 
+<!--中间第二部分开始-->
+<div class=section2 w>
+  <div class="s2-tip">
+    <h2><i><img src="images/logo_389.png"></i><span>冷冻冷藏&nbsp;/</span><em>你家的冰箱永远少一块儿肉</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s2-top">
+    <div class="s2-top-pic1"><a href="#" target="_blank"><img src="images/15.jpg"></a></div>
+    <div class="s2-top-pic2"><a href="#" target="_blank"><img src="images/16.jpg"></a></div>
+  </div>
+  <div class="s2-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/17.jpg"></a> <strong> <a target="_blank" href="#">[美国] 【新品推荐】罗杰斯银鳕鱼500g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥218.00</span>
+          <p class="s2-sprice">￥213.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/18.jpg"></a> <strong> <a target="_blank" href="#">[格陵兰] 【新品推荐】罗杰斯格陵兰冻比目鱼500g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥79.90</span>
+          <p class="s2-sprice">￥76.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/19.jpg"></a> <strong> <a target="_blank" href="#">[越南] 罗杰斯精选龙利鱼（巴沙鱼片）约1.4kg左右</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥78.50</span>
+          <p class="s2-sprice">￥76.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/20.jpg"></a> <strong> <a target="_blank" href="#">[越南] 黑虎虾仁500g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥108.00</span>
+          <p class="s2-sprice">￥105.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/21.jpg"></a><i></i> <strong> <a target="_blank" href="#">[智利] 罗杰斯精选三文鱼段400g（每袋约2块）</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥89.90</span>
+          <p class="s2-sprice">￥87.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/22.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] 罗杰斯精选谷饲牛腩500g（整块装）</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥56.50</span>
+          <p class="s2-sprice">￥54.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/23.jpg"></a> <strong> <a target="_blank" href="#">[澳大利亚] 大诺农场肉眼牛排（原装进口）180g*2</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥188.00</span>
+          <p class="s2-sprice">￥186.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/24.jpg"></a> <strong> <a target="_blank" href="#">[澳大利亚] 罗杰斯精选谷饲S级牛肉菲力（里脊）切片500g（约4-5片装）</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥146.00</span>
+          <p class="s2-sprice">￥142.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/25.jpg"></a> <strong> <a target="_blank" href="#">[瑞士] 好伯生澳洲牛肉烤肠400g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥51.90</span>
+          <p class="s2-sprice">￥50.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/28.jpg"></a> <strong> <a target="_blank" href="#">[瑞士] 【新品推荐】好伯法兰克福肠500g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥45.90</span>
+          <p class="s2-sprice">￥44.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/26.jpg"></a> <strong> <a target="_blank" href="#">[美国] 【新品推荐】HOTP好派马苏里拉乳酪酥饼255g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥45.90</span>
+          <p class="s2-sprice">￥44.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/27.jpg"></a> <strong> <a target="_blank" href="#">[荷兰] 【6折专区】爱味客薯角荷兰蒜香2500g</a></strong>
+        <div class="s2-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s2-content-bot"> <span class="s2-nprice">￥99.00</span>
+          <p class="s2-sprice">￥59.40<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第二部分结束--> 
+<!--中间第三部分-->
+<div class=section3 w>
+  <div class="s3-tip">
+    <h2><i><img src="images/logo_445.png"></i><span>健康膳食&nbsp;/</span><em>健康食材，营养搭配</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s3-top">
+    <div class="s3-top-pic1"><a href="#" target="_blank"><img src="images/29.jpg"></a></div>
+    <div class="s3-top-pic2"><a href="#" target="_blank"><img src="images/30.jpg"></a></div>
+  </div>
+  <div class="s3-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/31.jpg"></a> <strong> <a target="_blank" href="#">[日本] 瀛之光越光米2kg</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥149.00</span>
+          <p class="s3-sprice">￥146.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/32.jpg"></a> <strong> <a target="_blank" href="#">[日本] 播州乌冬面(挂面)儿童面200g*2</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥58.50</span>
+          <p class="s3-sprice">￥56.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/33.jpg"></a><i></i> <strong> <a target="_blank" href="#">[日本] 龟甲万酿造酱油浓口(烹调用)750ml</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥51.9</span>
+          <p class="s3-sprice">￥49.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/34.jpg"></a><i></i> <strong> <a target="_blank" href="#">[西班牙] 贝蒂斯特级初榨橄榄油1L</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥149.00</span>
+          <p class="s3-sprice">￥147.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/35.jpg"></a> <strong> <a target="_blank" href="#">[意大利] 【6折专区】公鸡意大利面字母形250g*6</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥46.90</span>
+          <p class="s3-sprice">￥28.10<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/36.jpg"></a> <strong> <a target="_blank" href="#">[希腊] Melissa麦丽莎海绵宝宝儿童意大利面500g*2</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥41.90</span>
+          <p class="s3-sprice">￥39.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/37.jpg"></a><i></i> <strong> <a target="_blank" href="#">[美国] Kirkland柯克蓝混合坚果无盐1130g</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥178.00</span>
+          <p class="s3-sprice">￥175.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/38.jpg"></a> <strong> <a target="_blank" href="#">[越南] 越南榙榙综合蔬果干200g</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥20.50</span>
+          <p class="s3-sprice">￥19.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/39.jpg"></a> <strong> <a target="_blank" href="#">[美国] GODIVA歌帝梵72%可可黑巧克力排块90g</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥39.90</span>
+          <p class="s3-sprice">￥38.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/40.jpg"></a> <strong> <a target="_blank" href="#">[马来西亚] Julie's茱蒂丝美旋律饼干什锦味650g</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥35.90</span>
+          <p class="s3-sprice">￥35.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/41.jpg"></a> <strong> <a target="_blank" href="#">[韩国] SAJO海牌海飘海苔芥末味20g*3（每包10小袋）</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥29.90</span>
+          <p class="s3-sprice">￥27.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/42.jpg"></a> <strong> <a target="_blank" href="#">[印尼] 克恩兹木薯片巴厘辣味150g*2</a></strong>
+        <div class="s3-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s3-content-bot"> <span class="s3-nprice">￥30.90</span>
+          <p class="s3-sprice">￥28.90<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第三部分结束--> 
+<!--中间第四部分开始-->
+<div class=section4 w>
+  <div class="s4-tip">
+    <h2><i><img src="images/logo_407.png"></i><span>健康饮品&nbsp;/</span><em>茶类饮料加咖啡，蜂蜜美酒饮用水</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s4-top">
+    <div class="s4-top-pic1"><a href="#" target="_blank"><img src="images/43.jpg"></a></div>
+    <div class="s4-top-pic2"><a href="#" target="_blank"><img src="images/44.jpg"></a></div>
+  </div>
+  <div class="s4-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/45.jpg"></a> <strong> <a target="_blank" href="#">[荷兰] 【新品推荐】Sourcy狮力苏打水不含气泡易拉罐330ml*4</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥29.90</span>
+          <p class="s4-sprice">￥27.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/46.jpg"></a> <strong> <a target="_blank" href="#">[荷兰] 【新品推荐】Sourcy狮力苏打水不含气玻璃瓶750ml</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥26.90</span>
+          <p class="s4-sprice">￥25.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/47.jpg"></a><i></i> <strong> <a target="_blank" href="#">[法国] Evian依云天然矿泉水500ml*24瓶</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥205.00</span>
+          <p class="s4-sprice">￥203.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/48.jpg"></a> <strong> <a target="_blank" href="#">[泰国] 【新品推荐】力大狮原味豆奶饮料500ml*4</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥32.90</span>
+          <p class="s4-sprice">￥32.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/49.jpg"></a> <strong> <a target="_blank" href="#">[美国] Snapple思乐宝健怡饮料桑子蔓越莓混合果味473ml*4</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥47.50</span>
+          <p class="s4-sprice">￥45.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/50.jpg"></a><i></i> <strong> <a target="_blank" href="#">[美国] Starbucks星巴克咖啡饮料原味281ml*4</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥60.50</span>
+          <p class="s4-sprice">￥58.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/51.jpg"></a> <strong> <a target="_blank" href="#">[斯里兰卡] Dilmah迪尔玛英式早餐茶50g(每盒25袋)*2</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥49.90</span>
+          <p class="s4-sprice">￥47.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/52.jpg"></a> <strong> <a target="_blank" href="#">[台湾] 三点一刻经典港式奶茶120g*2</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥29.90</span>
+          <p class="s4-sprice">￥29.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/53.jpg"></a> <strong> <a target="_blank" href="#">[英国] JohnnieWalker尊尼获加黑牌调配型苏格兰威士忌700ml</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥209.00</span>
+          <p class="s4-sprice">￥203.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/54.jpg"></a> <strong> <a target="_blank" href="#">[美国] JackDaniels杰克丹尼田纳西州威士忌700ml</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥155.00</span>
+          <p class="s4-sprice">￥150.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/55.jpg"></a> <strong> <a target="_blank" href="#">[法国] MoetChandon酩悦香槟750ml</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥415.00</span>
+          <p class="s4-sprice">￥405.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/56.jpg"></a> <strong> <a target="_blank" href="#">[法国] 波力可夫伏特加200ml</a></strong>
+        <div class="s4-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s4-content-bot"> <span class="s4-nprice">￥37.90</span>
+          <p class="s4-sprice">￥37.00<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第四部分结束--> 
+
+<!--中间第五部分开始-->
+<div class=section5 w>
+  <div class="s5-tip">
+    <h2><i><img src="images/logo_386.png"></i><span>营养保健&nbsp;/</span><em>营养加调节，身体更健康</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s5-top">
+    <div class="s5-top-pic1"><a href="#" target="_blank"><img src="images/57.jpg"></a></div>
+    <div class="s5-top-pic2"><a href="#" target="_blank"><img src="images/58.jpg"></a></div>
+  </div>
+  <div class="s5-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/59.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Swisse斯维斯维生素C泡腾片1000mg60片</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥148.00</span>
+          <p class="s5-sprice">￥145.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/60.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Swisse斯维斯蔓越莓胶囊30粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥99.00</span>
+          <p class="s5-sprice">￥98.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/61.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Blackmores澳佳宝男士活力综合营养素50片</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥169.00</span>
+          <p class="s5-sprice">￥159.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/62.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Blackmores澳佳宝女性复合维生素50片</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥169.00</span>
+          <p class="s5-sprice">￥159.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/63.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sCare纳世凯尔皇家蜂胶软胶囊(2000)360粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥269.00</span>
+          <p class="s5-sprice">￥259.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/64.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sCare纳世凯尔红袋鼠精胶囊200粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥269.00</span>
+          <p class="s5-sprice">￥255.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/65.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] HealthyCare葡萄籽精华胶囊300粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥188.00</span>
+          <p class="s5-sprice">￥173.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/66.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] HealthyCare深海鱼油400粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥128.00</span>
+          <p class="s5-sprice">￥115.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/67.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Swisse斯维斯孕妇复合维生素胶囊90粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥199.00</span>
+          <p class="s5-sprice">￥189.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/68.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Blackmores澳佳宝孕妇黄金素180粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥235.00</span>
+          <p class="s5-sprice">￥206.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/69.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sWay佳思敏儿童钙片+VD软糖60粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥89.00</span>
+          <p class="s5-sprice">￥85.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/70.jpg"></a></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sWay佳思敏儿童鱼油软糖60粒</a></strong>
+        <div class="s5-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s5-content-bot"> <span class="s5-nprice">￥89.00</span>
+          <p class="s5-sprice">￥85.00<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第五部分结束--> 
+
+<!--中间第六部分开始-->
+<div class=section6 w>
+  <div class="s6-tip">
+    <h2><i><img src="images/logo_456.png"></i><span>个人护理&nbsp;/</span><em>给你全方位的呵护</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s6-top">
+    <div class="s6-top-pic1"><a href="#" target="_blank"><img src="images/71.jpg"></a></div>
+    <div class="s6-top-pic2"><a href="#" target="_blank"><img src="images/72.jpg"></a></div>
+  </div>
+  <div class="s6-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/73.jpg"></a> <strong> <a target="_blank" href="#">[台湾] DR.morita森田药妆玻尿酸保湿面膜4片装</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥58.90</span>
+          <p class="s6-sprice">￥57.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/74.jpg"></a> <strong> <a target="_blank" href="#">[日本] Kracie肌美精立体浸透保湿面膜（弹力）30ml*4片</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥104.00</span>
+          <p class="s6-sprice">￥101.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/75.jpg"></a><i></i> <strong> <a target="_blank" href="#">[法国] Bioderma贝德玛舒妍多效洁肤液卸妆水500ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥158.00</span>
+          <p class="s6-sprice">￥136.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/76.jpg"></a> <strong> <a target="_blank" href="#">[英国] AASkincare玫瑰果油100ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥99.00</span>
+          <p class="s6-sprice">￥87.9.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/77.jpg"></a> <strong> <a target="_blank" href="#">[意大利] Marvis玛尔斯紫色茉莉薄荷牙膏 75ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥48.90</span>
+          <p class="s6-sprice">￥47.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/78.jpg"></a> <strong> <a target="_blank" href="#">[日本] LION狮王细齿洁四列超细毛牙刷标准2支</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥69.90</span>
+          <p class="s6-sprice">￥68.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/79.jpg"></a> <strong> <a target="_blank" href="#">[日本] Propolinse比那氏蜂胶漱口水樱花版600ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥54.50</span>
+          <p class="s6-sprice">￥53.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/80.jpg"></a> <strong><i></i> <a target="_blank" href="#">[日本] Shiseido资生堂惠润沐浴露650ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥49.90</span>
+          <p class="s6-sprice">￥48.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/81.jpg"></a> <strong> <a target="_blank" href="#">[英国] Batiste碧缇丝头发干洗喷雾经典洁净200ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥48.90</span>
+          <p class="s6-sprice">￥47.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/82.jpg"></a> <strong> <a target="_blank" href="#">[西班牙] KERASTASE卡诗黛丝逸柔洗发水洗发露250ml</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥258.00</span>
+          <p class="s6-sprice">￥252.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/83.jpg"></a> <strong> <a target="_blank" href="#">[日本] Unicharm尤妮佳省水化妆棉40枚入</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥28.90</span>
+          <p class="s6-sprice">￥27.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/84.jpg"></a> <strong> <a target="_blank" href="#">[美国] Coppertone水宝宝水嫩无泪无香防晒乳SPF50237mL</a></strong>
+        <div class="s6-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s6-content-bot"> <span class="s6-nprice">￥105.00</span>
+          <p class="s6-sprice">￥103.00<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第六部分结束--> 
+
+<!--中间第七部分开始-->
+<div class=section7 w>
+  <div class="s7-tip">
+    <h2><i><img src="images/logo_463.png"></i><span>绿色家居 &nbsp;/</span><em>环保安全，舒适自然</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s7-top">
+    <div class="s7-top-pic1"><a href="#" target="_blank"><img src="images/85.jpg"></a></div>
+    <div class="s7-top-pic2"><a href="#" target="_blank"><img src="images/86.jpg"></a></div>
+  </div>
+  <div class="s7-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/87.jpg"></a> <strong> <a target="_blank" href="#">[德国] MAMMUT中华炒锅明火可用</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥569.00</span>
+          <p class="s7-sprice">￥530.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/88.jpg"></a> <strong> <a target="_blank" href="#">[德国] MAMMUT网格牛排煎锅明火可用</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥689.00</span>
+          <p class="s7-sprice">￥650.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/89.jpg"></a> <strong> <a target="_blank" href="#">[美国] ECOS地球之友水果蔬菜洗涤剂650ml</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥41.90</span>
+          <p class="s7-sprice">￥40.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/90.jpg"></a> <strong> <a target="_blank" href="#">[德国] Pril汉高高级餐具洗洁精柠檬香型500ml</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥41.90</span>
+          <p class="s7-sprice">￥40.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/91.jpg"></a> <strong> <a target="_blank" href="#">[德国] Kappus吉百事植物马赛深层洗衣皂250g</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥25.90</span>
+          <p class="s7-sprice">￥24.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/92.jpg"></a> <strong> <a target="_blank" href="#">[日本] KAO花王衣领清洗剂瓶装300ml</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥35.00</span>
+          <p class="s7-sprice">￥34.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/93.jpg"></a> <strong> <a target="_blank" href="#">[德国] Frosch菲洛施羊毛真丝精细织物洗衣液1.8L</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥135.00</span>
+          <p class="s7-sprice">￥131.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/94.jpg"></a> <strong> <a target="_blank" href="#">[美国] Purex普雷克斯高效超浓缩洗衣液雨后清香型1.47L</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥88.9.00</span>
+          <p class="s7-sprice">￥86.9.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/95.jpg"></a> <strong> <a target="_blank" href="#">[日本] Unicharm尤妮佳苏菲夜用棉柔卫生巾30cm12片</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥29.90</span>
+          <p class="s7-sprice">￥28.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/96.jpg"></a> <strong> <a target="_blank" href="#">[日本] KAO花王乐而雅F系列护翼卫生巾25cm*18片（日用型）</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥40.90</span>
+          <p class="s7-sprice">￥39.90<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/97.jpg"></a> <strong> <a target="_blank" href="#">[德国] Dr.Beckmann贝克曼博士烤箱专用清洁剂375ml</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥48.50</span>
+          <p class="s7-sprice">￥47.50<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/98.jpg"></a> <strong> <a target="_blank" href="#">[上海] TG无纺布抹布6片装*4包</a></strong>
+        <div class="s7-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s7-content-bot"> <span class="s7-nprice">￥39.9.00</span>
+          <p class="s7-sprice">￥39.00<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第七部分结束--> 
+
+<!--中间第八部分开始-->
+<div class=section8 w>
+  <div class="s8-tip">
+    <h2><i><img src="images/logo_391.png"></i><span>环球特购 &nbsp;/</span><em>您身边的全球管家</em>
+      <p><a href="#">去逛一下&nbsp;></a></p>
+    </h2>
+  </div>
+  <div class="s8-top">
+    <div class="s8-top-pic1"><a href="#" target="_blank"><img src="images/99.jpg"></a></div>
+    <div class="s8-top-pic2"><a href="#" target="_blank"><img src="images/100.jpg"></a></div>
+  </div>
+  <div class="s8-content">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/101.jpg"></a><i></i> <strong> <a target="_blank" href="#">[加拿大] GROWGORGEOUS生发精华液60ML</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥315.00</span>
+          <p class="s8-sprice">￥289.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/102.jpg"></a><i></i> <strong> <a target="_blank" href="#">[加拿大] GROWGORGEOUS深层洗发液+护理精华液组合装190M</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥380.00</span>
+          <p class="s8-sprice">￥360.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/103.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sCarePawPaw保湿喷雾100ml*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥139.00</span>
+          <p class="s8-sprice">￥135.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/104.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Nature'sCarePawPaw木瓜润唇膏柑橘味10g*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥129.00</span>
+          <p class="s8-sprice">￥127.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/105.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Devondale德运高钙脱脂成人奶粉1kg*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥209.00</span>
+          <p class="s8-sprice">￥205.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/106.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Capilano卡皮拉诺康蜜乐麦卢卡蜂蜜NPA5+/MGO83</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥169.00</span>
+          <p class="s8-sprice">￥161.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/107.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Capilano卡皮拉诺康蜜乐便利装蜂蜜375g</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥129.00</span>
+          <p class="s8-sprice">￥116.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/108.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] HealthyCareVE面霜50g*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥179.00</span>
+          <p class="s8-sprice">￥169.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/109.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Aerogard驱蚊水防蚊液175ml</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥128.00</span>
+          <p class="s8-sprice">￥125.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/110.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Gaia天然婴儿爽身粉100g*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥89.00</span>
+          <p class="s8-sprice">￥85.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/111.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Gaia天然婴儿爽身粉100g*2</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥189.00</span>
+          <p class="s8-sprice">￥187.00<em>最低可达</em></p>
+        </div>
+      </li>
+      <li><a href="#" target="_blank"><img src="images/112.jpg"></a><i></i> <strong> <a target="_blank" href="#">[澳大利亚] Aveeno艾维诺天然燕麦保湿润肤乳1L</a></strong>
+        <div class="s8-content-pop"><a href="#"><img src="images/sp-tiajiagouwudai.png" style="width:24px;height:24px;display:block;float:left;">加入购物车</a></div>
+        <div class="s8-content-bot"> <span class="s8-nprice">￥259.00</span>
+          <p class="s8-sprice">￥246.00<em>最低可达</em></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--中间第八部分结束--> 
+
+<!--底部开始-->
+<div class="footer">
+  <div class="fmain w">
+    <div class="footer-l"> <img src="images/dilogo.png"> <span><img src="images/dianhua.png">400-888-3796</span>
+      <p>周一至周日 9:00-18:00</p>
+    </div>
+    <div class="footer-c">
+      <ul>
+        <li><a href="#" title="关于我们">关于我们</a>
+          <div class="li-list">
+            <p><a target="_blank" href="#">战略委员会</a></p>
+            <p><a target="_blank" href="#">管理团队</a></p>
+            <p><a target="_blank" href="#">媒体报道</a></p>
+            <p><a target="_blank" href="#">创始人说</a></p>
+          </div>
+        </li>
+        <li><a href="#" title="加入特购社">加入特购社</a>
+          <div class="li-list">
+            <p><a target="_blank" href="#">关于特购社</a></p>
+            <p><a  href="JavaScript:" class="#">加入特购社</a></p>
+            <!-- <p><a target="_blank" href="/usercenter/about/51">企业客户</a></p> --> 
+          </div>
+        </li>
+        <li><a href="#" title="供应链介绍">供应链介绍</a>
+          <div class="li-list">
+            <p><a target="_blank" href="#">严格选品</a></p>
+            <p><a target="_blank" href="#">商品溯源</a></p>
+            <p><a target="_blank" href="#">专业仓储</a></p>
+          </div>
+        </li>
+        <li><a href="#" title="支付与配送">支付与配送</a>
+          <div class="li-list">
+            <p><a target="_blank" href="#">支付方式</a></p>
+            <p><a target="_blank" href="#">发货和配送</a></p>
+            <p><a target="_blank" href="#">运费和收货</a></p>
+            <p><a target="_blank" href="#">验货签收</a></p>
+            <p><a target="_blank" href="#" >快递查询</a></p>
+          </div>
+        </li>
+        <li><a href="#" title="顾客服务">顾客服务</a>
+          <div class="li-list">
+            <p><a target="_blank" href="#">常见问题</a></p>
+            <p><a target="_blank" href="#">退换货政策</a></p>
+            <p><a target="_blank" href="#">退换货流程</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-r"> <span class="footer-r-t1">关注特购社</span> <span class="footer-r-t2">扫二维码关注特购社</span>
+      <div class="footer-r-weibo"> <img src="images/weibo.jpg" /> </div>
+      <div class="footer-r-weixin"> <img src="images/weixin.jpg" /> </div>
+    </div>
+  <div class="footer-nav"> <span><a href="#" title="公司简介">公司简介</a></span> <span>|</span> <span><a href="#" title="商务合作">商务合作</a></span> <span>|</span> <span><a href="#" title="企业团购">企业团购</a></span> <span>|</span> <span><a href="#" title="人才招聘">人才招聘</a></span> <span>|</span> <span><a href="contact.html" title="联系我们">联系我们</a></span> </div>
+</div>
+</div>
+<div class="legal">Copyright © 2017 天天百分百（北京）商贸有限公司tegoushe.com版权所有 食品流通许可证号SP1101131410101403(1-1) | 京ICP证14022634号</div>
+</body>
+</html>
